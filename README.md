@@ -34,27 +34,7 @@ This note-taking application will allow users to organize their thoughts and kee
 
 ## Installation 
 
-Install Node.Js
-
-https://nodejs.org/en/download
-
-Install Express
-
-```
-$ npm init
-
-```
-```
-$ npm install express
-
-```
-
-Install UUID
-
-```
-npm install uuid
-
-```
+None needed.
 
 
 
@@ -64,14 +44,9 @@ npm install uuid
 
 
 ## Usage
-Install Express, Install UUID. 
-Run 
-```
-node server.js
-
-```
-
-
+Add Notes and save using Save button.
+<br/>
+Delete Notes using delete icon.
 
 
 
