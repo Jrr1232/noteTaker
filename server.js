@@ -22,6 +22,33 @@ app.get('/notes', (req, res) =>
 app.get('/api/notes', (req, res) =>
     res.json(noteData)
 );
+app.delete('/api/notes/:id', (req, res) => {
+    const idToDelete = req.params.id;
+
+    // Find the index of the note with the given ID in the array
+    const indexToDelete = noteData.findIndex((note) => note.id === idToDelete);
+
+    if (indexToDelete === -1) {
+        // If the note with the provided ID is not found, send a 404 Not Found response
+        res.status(404).json({ error: 'Note not found' });
+    } else {
+        // Remove the note from the array
+        noteData.splice(indexToDelete, 1);
+
+        // Write the updated note data to the JSON file
+        const reviewString = JSON.stringify(noteData);
+        fs.writeFile('./db/db.json', reviewString, (err) =>
+            err
+                ? console.error(err)
+                : console.log('Note has been deleted and data updated in JSON file')
+        );
+
+        // Send a success response
+        res.status(204).send();
+    }
+});
+
+
 
 app.post('/api/notes', (req, res) => {
     const { title, text } = req.body;
@@ -40,6 +67,7 @@ app.post('/api/notes', (req, res) => {
                     `Review for has been written to JSON file`
                 )
         );
+
         // const response = {
         //     body: noteData,
         // }
