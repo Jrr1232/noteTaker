@@ -8,7 +8,7 @@
 
 ## 🤔 Introduction
 
-### This note-taking application will allow users to organize their thoughts and keep track of tasks need to be completed. The Note Taker will allows users to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.This project will help anyone to write and save their notes. It will help organize your tasks. I learned Express.js, and Heroku
+This note-taking application will allow users to organize their thoughts and keep track of tasks need to be completed. The Note Taker will allows users to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.This project will help anyone to write and save their notes. It will help organize your tasks. I learned Express.js, and Heroku
 
 
 
