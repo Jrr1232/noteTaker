@@ -4,8 +4,8 @@ const path = require('path');
 let noteData = require('./db/db.json');
 const { v4: uuidv4 } = require('uuid')
 const app = express()
-const PORT = 3001;
-   
+const PORT = process.env.PORT
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
