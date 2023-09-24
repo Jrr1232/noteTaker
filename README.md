@@ -24,7 +24,7 @@ This note-taking application will allow users to organize their thoughts and kee
 
 ## 🏗️🚧 Built With 
 
--Express,Node.js
+-Express, Node.js. 
 
 
 
